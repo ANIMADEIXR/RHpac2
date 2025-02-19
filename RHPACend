@@ -1,0 +1,45 @@
+--carregar blibioteca
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+-- avisos ao executar 
+Fluent:Notify({ Title = "script executado", Content = "aproveite o script" })
+
+local Window = Fluent:CreateWindow({
+    Title = "pac do RH" .. Fluent.Version,
+    TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "Dark"
+})
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+-- parÃ¡grafos 
+Tabs.Main:AddParagraph({ Title = "Boa sorte", Content = "Boa sorte" })
+-- botÃµes
+Tabs.Main:AddButton({ Title = "Rael hub", Callback = function() 
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rael-Hub-27610"))()
+end })
+Tabs.Main:AddButton({ Title = "Chaos hub", Callback = function() 
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Chaos-Hub-V1-NO-KEY-29245"))()
+end })
+Tabs.Main:AddButton({ Title = "Shadow hub", Callback = function() 
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Shadow-Hub-27866"))()
+end })
+Tabs.Main:AddButton({ Title = "Fly", Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end })
+Tabs.Main:AddButton({ Title = "velocidade", Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ROBLOX-UNIVERSAL-SPEED-SCRIPT-10698"))()
+end })
+Tabs.Main:AddButton({ Title = "Cleitin hub key: kakakgaisvau", Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CLEITI6966/Brookhaven/refs/heads/main/start.lua"))()
+end })
+Tabs.Main:AddButton({ Title = "SHNMAXHUB ( NÃƒO SEI QUAL VERSÃƒO)", Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/kiwidev246/SHNMAX-/refs/heads/main/README.md"))()
+end })
+Tabs.Main:AddButton({ Title = "SP HUB", Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-SP-Hub-New-Uptade-Script-29166"))()
+end })
+-- alterador
+local Toggle = Tabs.Main:AddToggle("opÃ§Ã£o em desilvovimento", { Title = "sem" })
+Toggle:OnChanged(function() print(Options.MyToggle.Value) end)
